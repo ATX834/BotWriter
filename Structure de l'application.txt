@@ -25,3 +25,5 @@ ________________________________________________________________________________
 
 Il faut toujours une possibilité de retour dans chaque partie de l'application (en dehors de l'entrée et du 
 tableau de bord).
+
+Envoyer toujours un message d'erreur/de réussite selon la situation.

@@ -4,24 +4,37 @@ services:
   db:
     image: mariadb
     container_name: db
-    volumes: ["./backend/db:/var/lib/mysql"]
+    volumes: 
+      - db:/var/lib/mysql
     ports:
-      - 3307:3307
+      - 3306:3306
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: db
     networks:
       - gldm_net
-  node:
-    image: node
-    container_name: node
-    working_dir: /var/www/html
+  client:
+    build: ./client
+    container_name: client
+    ports:
+      - '3000:3000'
+    # working_dir: '/var/www/html'
+    volumes: ['./client/src:/app/src']
+    # command: tail -F anything 
+  server:
+    # image: node:latest
+    build: ./server
+    container_name: server
+    # working_dir: /var/www/html
     ports:
       - '4000:4000'
-    volumes: ['./:/var/www/html']
-    command: tail -F anything
+    volumes: ['./server/src:/app/src']
+    # volumes: ['./backend:/var/www/html']
+    # command: tail -F anything
     networks:
       - gldm_net
 networks:
   gldm_net:
+volumes:
+  db:
