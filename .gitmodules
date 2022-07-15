@@ -1,3 +1,6 @@
 [submodule "GLDM-Backend"]
 	path = GLDM-Backend
 	url = https://github.com/ATX834/GLDM-Backend.git
+[submodule "GLDM-Frontend"]
+	path = GLDM-Frontend
+	url = https://github.com/ATX834/GLDM-Frontend
