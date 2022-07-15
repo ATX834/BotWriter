@@ -1,6 +1,6 @@
-[submodule "GLDM-Backend"]
-	path = GLDM-Backend
-	url = https://github.com/ATX834/GLDM-Backend.git
+[submodule "Botwriter-Server"]
+	path = server
+	url = https://github.com/ATX834/Botwriter-Server.git
 [submodule "GLDM-Frontend"]
-	path = GLDM-Frontend
+	path = client
 	url = https://github.com/ATX834/GLDM-Frontend
