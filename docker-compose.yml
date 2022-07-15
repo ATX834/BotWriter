@@ -32,9 +32,9 @@ services:
       ]
     networks:
       - net
-  pdf_generator:
-    build: ./services/pdf_generator
-    container_name: pdf_generator
+  pdf_api:
+    build: ./services/pdf_api
+    container_name: pdf_api
     ports:
       - '8000:8000'
     restart: always
