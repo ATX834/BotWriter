@@ -2,12 +2,14 @@
     "scripts": {
         "docker:client": "docker exec -it client /bin/sh",
         "docker:server": "docker exec -it server /bin/sh",
+        "docker:pdf": "docker exec -it pdf_generator /bin/sh",
         "docker:db": "docker exec -it db bash",
         "ts:build:docker": "docker exec node npm run transpile",
         "docker:build": "docker-compose up -d --build",
         "docker:run": "docker-compose up -d",
         "docker:shut": "docker-compose down",
         "docker:build:only": "docker-compose up -d --no-deps --build ",
-        "docker:logs": "docker-compose logs "
+        "docker:logs": "docker-compose logs ",
+        "docker:restart": "npm run docker:shut && npm run docker:run"
     }
 }
