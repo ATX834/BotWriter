@@ -7,7 +7,7 @@ services:
     volumes:
       - db:/var/lib/mysql
     ports:
-      - 3306:3306
+      - 3307:3306
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
@@ -19,17 +19,13 @@ services:
     container_name: client
     ports:
       - '3000:3000'
-    volumes: [ './client/src:/app/src' ]
+    volumes: [ './client/src:/app/src', './client/build:/app/build' ]
   server:
     build: ./server
     container_name: server
     ports:
       - '4000:4000'
-    volumes:
-      [
-        './server/src:/app/src',
-        './server/tmp/:/tmp/files'
-      ]
+    volumes: [ './server/src:/app/src', './server/tmp/:/tmp/files' ]
     networks:
       - net
   pdf_api:
