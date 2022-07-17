@@ -15,13 +15,17 @@ services:
     networks:
       - net
   client:
-    build: ./client
+    build:
+      context: ./client
+      dockerfile: dev.dockerfile
     container_name: client
     ports:
       - '3000:3000'
-    volumes: [ './client/build:/app/build' ]
+    volumes: [ './client/src:/app/src' ]
   server:
-    build: ./server
+    build:
+      context: ./server
+      dockerfile: dev.dockerfile
     container_name: server
     ports:
       - '4000:4000'
