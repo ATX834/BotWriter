@@ -1,0 +1,38 @@
+.App:-webkit-autofill {
+  -webkit-background-clip: text;
+}
+
+.HookInput:focus {
+  border-color: transparent !important;
+}
+
+.Blinker {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-duration: 1s;
+  position: relative;
+  bottom: 2px;
+  display: inline-block;
+  width: 0px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(white, 0.3);
+}
+
+.End-of-Line {
+    width: 10px;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.Badge span {
+  border-radius: 4px;
+  background-color: black;
+}

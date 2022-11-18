@@ -1,0 +1,22 @@
+{
+  "name": "generatepdffrompageurl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "html2json": "^1.0.2",
+    "puppeteer": "^15.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
